@@ -1,0 +1,9 @@
+/* body{
+    background: url(../img/bg-index.jpg );
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+input, select{
+    opacity: 50%;
+}
