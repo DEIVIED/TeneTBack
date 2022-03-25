@@ -18,6 +18,16 @@ router.post('/signUp', async (req, res, next) => {
   }
 });
 
+// router.post('/login', async (req, res, next) => {
+//   try {
+//     let { email, password, profil } = req.body;
+//     res.json(await essai.login(email, password, profil));
+//   } catch (error) {
+//     next(error)
+//   }
+
+// });
+
 router.post('/signIn', async (req, res, next) => {
   try {
     let { email, password, profil } = req.body;
