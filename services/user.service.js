@@ -29,6 +29,7 @@ const register = (User) => async (user) =>{
 const authenticate = User => async (email,password,profil)=>{
     try {
         const user = await User.findOne({ email: email, profil:profil });
+        user.isGranted = true;
         if (comparePassword(password, user.password)) {
             const token = generateMeAToken(user);
             return ({
@@ -43,7 +44,7 @@ const authenticate = User => async (email,password,profil)=>{
             return ({
                 status: "error",
                 message: "Invalid email or password!!!",
-                payload: user
+                payload: null
             })
         }
     } catch (error) {

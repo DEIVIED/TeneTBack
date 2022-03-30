@@ -30,6 +30,18 @@ const UserSchema = new Schema({
         trim: true,
         required: [true, 'password is required']
     },
+    followers : [
+        {
+            type: mongoose.Types.ObjectId, 
+            ref: 'User'
+        }
+    ],
+    following : [
+        {
+            type: mongoose.Types.ObjectId, 
+            ref: 'User'
+        }
+    ],
     numero: {
         type: String,
     },
@@ -44,6 +56,9 @@ const UserSchema = new Schema({
     isGranted: {
         type: Boolean,
         default: false
+    },
+    profiluser: {
+        type : Object,
     }
 }, {
     timestamps: true
