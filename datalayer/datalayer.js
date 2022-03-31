@@ -12,7 +12,7 @@ const mongooseOptions = {
 
 const connectionDB = async () => {
     try {
-        await mongoose.connect(urlMongod, mongooseOptions);
+        await mongoose.connect(DB_URI, mongooseOptions);
         console.log("Successfully connected to the database");
     } catch (error) {
         console.error(error);
