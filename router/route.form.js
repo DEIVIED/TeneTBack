@@ -6,6 +6,7 @@ const userService = require('../services/user.service')(User);
 /* GET users listing. */
 router.get('/', function (req, res, next) {
   res.json({ user: 'Ok' });
+  console.log('Test ok');
 });
 
 router.post('/signUp', async (req, res, next) => {
