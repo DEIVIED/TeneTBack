@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 const host = "localhost";
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 app.use(cookieParser());
 app.use('/images', express.static(path.join(__dirname, 'images')));
