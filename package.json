@@ -1,8 +1,11 @@
 {
-  "name": "projetpsej",
+  "name": "back",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "14.16.0"
+  },
   "scripts": {
     "serve": "lite-server",
     "start": "node server.js",
