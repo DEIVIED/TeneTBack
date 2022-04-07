@@ -19,8 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // app.use(flash());
 
-
-const host = "localhost";
+//const host = process.env.HOST || "localhost";
 const port = process.env.PORT || 3000;
 
 app.use(cookieParser());
@@ -34,9 +33,9 @@ datalayer.connectionDB();
 
 
 
-app.listen(port, host, () => {
+app.listen(port, () => {
     try {
-        console.log(`server running on ${host}:${port}`);
+        console.log(`server running on ${port}`);
     } catch (error) {
         console.error(error);
     }
