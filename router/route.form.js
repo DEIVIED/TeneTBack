@@ -15,7 +15,6 @@ router.post('/signUp', async (req, res, next) => {
   const _user = req.body;
   try {
     let response = await userService.register(_user);
-    console.log('response');
     res.json(response);
   } catch (error) {
     next(error)
